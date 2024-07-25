@@ -10,7 +10,24 @@ gsap.to("#bg_image", {
     end: "bottom top",
     scrub: true,
   },
-  y: -window.innerHeight * 0.5,
+  y: window.innerHeight * 0.5,
   ease: "none",
   duration: 1,
 });
+
+gsap.utils.toArray(".img").forEach((img, i) => {
+  gsap.to(img, {
+    scrollTrigger: {
+      trigger: `.parallax_${i + 1}`,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+      onEnter: () => {
+        console.log(img);
+      }
+    },
+    y: -400,
+    ease: "none",
+    duration: 1,
+  });
+})
