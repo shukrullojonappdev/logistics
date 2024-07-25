@@ -4,6 +4,9 @@ import heroImage from "../assets/images/rodrigo-abreu-lq9PxpwDZUk-unsplash.jpg";
 ---
 
 <section id="hero" class="relative h-screen overflow-y-hidden">
+  <div id="bg_image" class="absolute top-0 left-0 h-screen w-full -z-10">
+    <Image src={heroImage} alt="bg image" class="h-full w-full object-cover" />
+  </div>
   <div class="relative max-w-[1172px] h-full mx-auto">
     <div
       class="absolute top-1/2 left-0 -translate-y-1/2 mt-[50px] bg-blue-50 text-center lg:w-[50%] lg:text-left mx-4 px-12 py-14 rounded-2xl"
@@ -20,8 +23,5 @@ import heroImage from "../assets/images/rodrigo-abreu-lq9PxpwDZUk-unsplash.jpg";
         >Get Started</button
       >
     </div>
-  </div>
-  <div id="bg_image" class="absolute top-0 left-0 h-screen w-full -z-20">
-    <Image src={heroImage} alt="bg image" class="h-full w-full object-cover" />
   </div>
 </section>
