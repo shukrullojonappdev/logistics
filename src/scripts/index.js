@@ -9,9 +9,8 @@ gsap.to("#bg_image", {
     start: "top bottom",
     end: "bottom top",
     scrub: true,
-    markers: true,
   },
-  translateY: window.innerHeight * 0.5,
+  y: window.innerHeight * 0.5,
   ease: "none",
   duration: 1,
 });
