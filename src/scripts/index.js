@@ -36,7 +36,7 @@ gsap.utils.toArray(".img").forEach((img, i) => {
 
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
-  spaceBetween: 30,
+  spaceBetween: 15,
   modules: [Navigation, Pagination],
   pagination: {
     el: ".swiper-pagination",

@@ -8,12 +8,12 @@ import img_3 from "../assets/images/sid-suratia-pzswjpVcKw4-unsplash.jpg";
 <section class="bg-blue-50 py-20">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
     <div class="grid grid-cols-2">
-      <div class="col-span-1">
+      <div class="col-span-1 flex flex-col justify-center">
         <h3 class="text-3xl lg:text-4xl font-title text-blue-600">
           Our Services
         </h3>
         <p class="text-gray-500 font-body font-medium leading-6 mt-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, aperiam
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br /> Est, aperiam
           itaque. Non optio dicta illo.
         </p>
       </div>
@@ -46,19 +46,23 @@ import img_3 from "../assets/images/sid-suratia-pzswjpVcKw4-unsplash.jpg";
   }
 
   .swiper-slide {
-    height: 500px;
-    width: 300px;
-  }
-  .swiper-slide-active {
-    transition-duration: 300ms;
     height: 600px;
     width: 400px;
   }
+  .swiper-slide-active img {
+    width: 100% !important;
+    height: 100% !important;
+  }
 
   .swiper-slide img {
+    transition-duration: 300ms;
     display: block;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 90%;
     object-fit: cover;
   }
 </style>
