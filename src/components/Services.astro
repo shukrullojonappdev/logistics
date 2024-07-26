@@ -1,16 +1,64 @@
+---
+import { Image } from "astro:assets";
+import img_1 from "../assets/images/arno-senoner-E85f48czQEg-unsplash.jpg";
+import img_2 from "../assets/images/bernd-dittrich-1Ff1e5_7NmE-unsplash.jpg";
+import img_3 from "../assets/images/sid-suratia-pzswjpVcKw4-unsplash.jpg";
+---
+
 <section class="bg-blue-50 py-20">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
-    <div class="grid grid-cols-5">
-      <div class="col-span-2">
+    <div class="grid grid-cols-2">
+      <div class="col-span-1">
         <h3 class="text-3xl lg:text-4xl font-title text-blue-600">
           Our Services
         </h3>
-        <p class="text-gray-500 font-body font-medium leading-6 mt-4 text-lg">
+        <p class="text-gray-500 font-body font-medium leading-6 mt-4">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, aperiam
           itaque. Non optio dicta illo.
         </p>
       </div>
-      <div class="col-span-3">asdf</div>
+      <div class="col-span-1">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <Image src={img_1} alt="service 1" />
+            </div>
+            <div class="swiper-slide">
+              <Image src={img_2} alt="service 1" />
+            </div>
+            <div class="swiper-slide">
+              <Image src={img_3} alt="service 1" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style scoped>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: 500px;
+    width: 300px;
+  }
+  .swiper-slide-active {
+    transition-duration: 300ms;
+    height: 600px;
+    width: 400px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
