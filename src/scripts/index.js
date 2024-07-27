@@ -8,6 +8,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.set("#bg_image", { y: 0 });
 gsap.to("#bg_image", {
   scrollTrigger: {
     trigger: "#gsap_1",
@@ -18,9 +19,11 @@ gsap.to("#bg_image", {
   y: window.innerHeight * 0.5,
   ease: "none",
   duration: 1,
+  immediateRender: false,
 });
 
 gsap.utils.toArray(".img").forEach((img, i) => {
+  gsap.set(img, { y: 0 });
   gsap.to(img, {
     scrollTrigger: {
       trigger: `.parallax_${i + 1}`,
@@ -31,6 +34,7 @@ gsap.utils.toArray(".img").forEach((img, i) => {
     y: -400,
     ease: "none",
     duration: 1,
+    immediateRender: false,
   });
 });
 
