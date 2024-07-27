@@ -15,11 +15,13 @@ gsap.to("#bg_image", {
     start: "top bottom",
     end: "bottom top",
     scrub: true,
+    markers: true
   },
   y: window.innerHeight * 0.5,
   ease: "none",
   duration: 1,
-  immediateRender: false,
+  immediateRender: true,
+  overwrite: true
 });
 
 gsap.utils.toArray(".img").forEach((img, i) => {
@@ -30,11 +32,13 @@ gsap.utils.toArray(".img").forEach((img, i) => {
       start: "top bottom",
       end: "bottom top",
       scrub: true,
+      markers: true
     },
     y: -400,
     ease: "none",
     duration: 1,
-    immediateRender: false,
+    immediateRender: true,
+    overwrite: true
   });
 });
 
