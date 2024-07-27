@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import icon_1 from "../assets/images/Vector.png";
+import icon_2 from "../assets/images/Vector-1.png";
+import icon_3 from "../assets/images/Vector-2.png";
+---
+
+<section class="py-20">
+  <div class="max-w-[1172px] px-4 h-full mx-auto">
+    <div class="text-center mb-16">
+      <h3 class="text-3xl lg:text-4xl text-center font-title text-blue-600">
+        Get in touch with us
+      </h3>
+      <p class="text-gray-500 font-body font-thin leading-6 mt-3">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+        necessitatibus perspiciatis velit, repellat consequuntur reprehenderit
+        repudiandae error minus saepe eius distinctio quidem atque rerum,
+        pariatur adipisci doloribus praesentium! Distinctio, eum!
+      </p>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="col-span-1 flex flex-col justify-center">
+        <div class="mb-12">
+          <h5 class="text-xl font-semibold font-title flex">
+            <Image src={icon_1} alt="icon" width={24} height={16} />
+            <span class="ml-2"> Address </span>
+          </h5>
+          <p class="font-body leading-6 font-medium text-gray-500 mt-2">
+            236 East 21st Street, New York, NY 10010
+            <br />
+            300 West 21st Street, New York, NY 10010
+          </p>
+        </div>
+        <div class="mb-12">
+          <h5 class="text-xl font-semibold font-title flex">
+            <Image src={icon_2} alt="icon" width={24} height={16} />
+            <span class="ml-2"> Phone </span>
+          </h5>
+          <p class="font-body leading-6 font-medium text-gray-500 mt-2">
+            Mobile: 987-654-3210
+            <br />
+            Office: 123-456-7890
+          </p>
+        </div>
+        <div class="mb-12">
+          <h5 class="text-xl font-semibold font-title flex">
+            <Image src={icon_3} alt="icon" width={24} height={16} />
+            <span class="ml-2"> Working time </span>
+          </h5>
+          <p class="font-body leading-6 font-medium text-gray-500 mt-2">
+            Monday - Friday: 9am - 5pm
+            <br />
+            Saturday: 9am - 1pm
+          </p>
+        </div>
+      </div>
+      <div class="col-span-1">
+        <form class="flex flex-col w-full">
+          <label class="ml-1 mb-2 font-body font-medium" for="fullname"
+            >Fullname</label
+          >
+          <input
+            class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your fullname"
+          />
+          <label class="ml-1 mb-2 font-body font-medium" for="email"
+            >Email</label
+          >
+          <input
+            class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <label class="ml-1 mb-2 font-body font-medium" for="subject"
+            >Subject</label
+          >
+          <input
+            class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter your subject"
+          />
+          <label class="ml-1 mb-2 font-body font-medium" for="message"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
+            name="message"
+            placeholder="Enter your message"></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 md:max-w-[50%] text-white px-16 py-4 mt-2 rounded-xl font-medium font-title text-sm duration-150 hover:scale-105"
+            >Submit</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

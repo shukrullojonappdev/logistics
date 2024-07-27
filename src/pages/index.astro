@@ -3,17 +3,24 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Services from "../components/Services.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.jpg";
 ---
 
 <Layout title="Logistic">
   <div>
-    <header class="absolute top-0 left-0 h-[100px] w-full bg-white text-center">
-      BRAND
+    <header
+      class="absolute top-0 left-0 h-[100px] w-full flex items-center justify-center bg-white"
+    >
+      <Image src={logo} alt="logo" class="h-[80px] w-auto" />
     </header>
     <Hero />
     <div id="gsap_1"></div>
     <About />
     <Services />
-    <footer class="h-[100px] bg-blue-50">asdfkngh</footer>
+    <Contact />
+    <Footer />
   </div>
 </Layout>
