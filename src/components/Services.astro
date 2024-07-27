@@ -7,13 +7,15 @@ import img_3 from "../assets/images/sid-suratia-pzswjpVcKw4-unsplash.jpg";
 
 <section class="bg-blue-50 py-20">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
-    <div class="grid grid-cols-2">
-      <div class="col-span-1 flex flex-col justify-center">
+    <div class="grid lg:grid-cols-2 grid-cols-1">
+      <div
+        class="col-span-1 flex flex-col justify-center lg:items-start items-center lg:text-left text-center mb-12"
+      >
         <h3 class="text-3xl lg:text-4xl font-title text-blue-600">
           Our Services
         </h3>
-        <p class="text-gray-500 font-body font-medium leading-6 mt-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br /> Est, aperiam
+        <p class="text-gray-500 font-body font-medium leading-6 mt-4 max-w-96">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, aperiam
           itaque. Non optio dicta illo.
         </p>
       </div>
@@ -41,6 +43,7 @@ import img_3 from "../assets/images/sid-suratia-pzswjpVcKw4-unsplash.jpg";
 
 <style scoped>
   .swiper {
+    max-width: 600px;
     width: 100%;
     height: 100%;
   }
@@ -64,5 +67,15 @@ import img_3 from "../assets/images/sid-suratia-pzswjpVcKw4-unsplash.jpg";
     width: 90%;
     height: 90%;
     object-fit: cover;
+  }
+
+  @media (max-width: 700px) {
+    .swiper {
+      max-width: 300px;
+    }
+    .swiper-slide {
+      height: 400px;
+      width: 250px;
+    }
   }
 </style>
