@@ -15,10 +15,11 @@ gsap.registerPlugin(ScrollTrigger);
       start: "top bottom",
       end: "bottom top",
       scrub: 0.1,
+      onUpdate: (self) => console.log(`progress ${self.id}:`, self.progress),
     },
     y: window.innerHeight * 0.5,
     immediateRender: true,
-    overwrite: true
+    overwrite: "auto"
   });
 
   gsap.utils.toArray(".img").forEach((img, i) => {
@@ -29,10 +30,11 @@ gsap.registerPlugin(ScrollTrigger);
         start: "top bottom",
         end: "bottom top",
         scrub: 0.3,
+        onUpdate: (self) => console.log(`progress ${self.id}:`, self.progress),
       },
       top: -400,
       immediateRender: true,
-      overwrite: true
+      overwrite: "auto"
     });
   });
 
