@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
 gsap.registerPlugin(ScrollTrigger);
-(() => {
+window.addEventListener("load", () => {
   gsap.set("#bg_image", { y: 0 });
   gsap.to("#bg_image", {
     scrollTrigger: {
@@ -15,11 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
       start: "top bottom",
       end: "bottom top",
       scrub: 0.1,
-      onUpdate: (self) => console.log(`progress ${self.id}:`, self.progress),
     },
     y: window.innerHeight * 0.5,
     immediateRender: true,
-    overwrite: "auto"
+    overwrite: true
   });
 
   gsap.utils.toArray(".img").forEach((img, i) => {
@@ -29,12 +28,11 @@ gsap.registerPlugin(ScrollTrigger);
         trigger: `.parallax_${i + 1}`,
         start: "top bottom",
         end: "bottom top",
-        scrub: 0.3,
-        onUpdate: (self) => console.log(`progress ${self.id}:`, self.progress),
+        scrub: 0.2,
       },
       top: -400,
       immediateRender: true,
-      overwrite: "auto"
+      overwrite: true
     });
   });
 
@@ -51,4 +49,4 @@ gsap.registerPlugin(ScrollTrigger);
       prevEl: ".swiper-button-prev",
     },
   });
-})()
+})
