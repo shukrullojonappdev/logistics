@@ -14,10 +14,11 @@ window.addEventListener("load", () => {
       trigger: "#gsap_1",
       start: "top bottom",
       end: "bottom top",
-      scrub: 0.1,
+      scrub: true,
     },
     y: window.innerHeight * 0.5,
-    immediateRender: true,
+    immediateRender: false,
+    duration: 1,
     overwrite: true
   });
 
@@ -28,10 +29,11 @@ window.addEventListener("load", () => {
         trigger: `.parallax_${i + 1}`,
         start: "top bottom",
         end: "bottom top",
-        scrub: 0.2,
+        scrub: true,
       },
       top: -400,
-      immediateRender: true,
+      duration: 1,
+      immediateRender: false,
       overwrite: true
     });
   });
