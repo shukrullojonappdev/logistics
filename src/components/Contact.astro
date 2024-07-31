@@ -63,11 +63,12 @@ import icon_3 from "../assets/images/Vector-2.png";
         </div>
       </div>
       <div class="col-span-1">
-        <form class="flex flex-col w-full">
+        <form id="contact-form" class="flex flex-col w-full">
           <label class="ml-1 mb-2 font-body font-medium" for="fullname"
             >Fullname</label
           >
           <input
+            autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="text"
             id="fullname"
@@ -78,6 +79,7 @@ import icon_3 from "../assets/images/Vector-2.png";
             >Email</label
           >
           <input
+            autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="email"
             id="email"
@@ -88,6 +90,7 @@ import icon_3 from "../assets/images/Vector-2.png";
             >Subject</label
           >
           <input
+            autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="text"
             id="subject"
@@ -102,13 +105,32 @@ import icon_3 from "../assets/images/Vector-2.png";
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             name="message"
             placeholder="Enter your message"></textarea>
-          <button
+          <input
             type="submit"
+            value="Submit"
             class="bg-blue-600 lg:max-w-[50%] text-white px-16 py-4 mt-2 rounded-xl font-medium font-title text-sm duration-150 hover:scale-105"
-            >Submit</button
-          >
+          />
         </form>
       </div>
     </div>
   </div>
+  <script is:inline src="https://smtpjs.com/v3/smtp.js"></script>
+  <script is:inline>
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", (e) => {
+      const payload = new FormData(e.target);
+      Email.send({
+        SecureToken: "9ce6e0d2-7579-4d17-a640-97a95b6839ce",
+        To: `${payload.get("email")}`,
+        From: "shukrullojon.dev@gmail.com",
+        Subject: `${payload.get("subject")}`,
+        Body: `${payload.get("message")}`,
+      }).then((message) => {
+        alert("Thank you for your message!");
+        console.log(message);
+        form.reset();
+      });
+      e.preventDefault();
+    });
+  </script>
 </section>
