@@ -2,16 +2,20 @@
 
 ---
 
-<section class="bg-blue-50 py-20">
-  <div class="max-w-[1172px] px-4 h-full mx-auto">
+<section class="mt-28">
+  <div
+    class="bg-blue-50 py-20 max-w-[1140px] h-full pl-0 md:pl-4 mx-auto rounded-3xl max-[1140px]:rounded-none"
+  >
     <div class="grid md:grid-cols-2 grid-cols-1">
       <div
-        class="col-span-1 flex flex-col justify-center lg:items-start items-center lg:text-left text-center mb-12"
+        class="col-span-1 flex flex-col justify-center items-center text-center mb-12"
       >
-        <h3 class="text-3xl lg:text-4xl font-title text-blue-600">
+        <h3 class="text-3xl lg:text-4xl font-title text-blue-600 mx-8">
           Our Services
         </h3>
-        <p class="text-gray-500 font-body font-medium leading-6 mt-4 max-w-96">
+        <p
+          class="text-gray-500 font-body font-medium leading-6 mt-4 max-w-96 mx-8"
+        >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, aperiam
           itaque. Non optio dicta illo.
         </p>
@@ -49,31 +53,123 @@
     height: 600px;
     width: 400px;
   }
-  .swiper-slide-active img {
-    width: 100% !important;
-    height: 100% !important;
+
+  .swiper-slide:last-child {
+    width: 424px;
   }
 
-  .swiper-slide img {
+  .swiper-slide-active img {
+    width: 400px !important;
+    height: 600px !important;
+  }
+
+  .swiper-slide:not(:last-child) img {
     transition-duration: 300ms;
     display: block;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    height: 90%;
+    width: 350px;
+    height: 550px;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 18px;
+  }
+
+  .swiper-slide:last-child img {
+    transition-duration: 300ms;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 16px);
+    transform: translateX(-50%);
+    width: 350px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 18px;
   }
 
   @media (max-width: 1000px) {
-    .swiper {
-      max-width: 300px;
-    }
     .swiper-slide {
-      height: 400px;
+      height: 500px;
+      width: 300px;
+    }
+
+    .swiper-slide:last-child {
+      width: 324px;
+    }
+
+    .swiper-slide-active img {
+      width: 300px !important;
+      height: 500px !important;
+    }
+
+    .swiper-slide:not(:last-child) img {
+      transition-duration: 300ms;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 250px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .swiper-slide:last-child img {
+      transition-duration: 300ms;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 16px);
+      transform: translateX(-50%);
+      width: 250px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+  }
+
+  @media (max-width: 765px) {
+    .swiper-slide {
+      height: 600px;
+      width: 400px;
+    }
+
+    .swiper-slide:last-child {
+      width: 424px;
+    }
+
+    .swiper-slide-active img {
+      width: 400px !important;
+      height: 600px !important;
+    }
+
+    .swiper-slide:not(:last-child) img {
+      transition-duration: 300ms;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .swiper-slide:last-child img {
+      transition-duration: 300ms;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 16px);
+      transform: translateX(-50%);
+      width: 350px;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 18px;
     }
   }
 </style>

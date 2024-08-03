@@ -1,17 +1,10 @@
----
-import { Image } from "astro:assets";
-import icon_1 from "../assets/images/Vector.png";
-import icon_2 from "../assets/images/Vector-1.png";
-import icon_3 from "../assets/images/Vector-2.png";
----
-
-<section class="py-20">
+<section class="py-32">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
     <div class="text-center mb-16">
       <h3 class="text-3xl lg:text-4xl text-center font-title text-blue-600">
         Get in touch with us
       </h3>
-      <p class="text-gray-500 font-body font-thin leading-6 mt-3">
+      <p class="text-gray-500 font-body font-thin leading-6 mt-4">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
         necessitatibus perspiciatis velit, repellat consequuntur reprehenderit
         repudiandae error minus saepe eius distinctio quidem atque rerum,
@@ -26,7 +19,7 @@ import icon_3 from "../assets/images/Vector-2.png";
           <h5
             class="text-xl font-semibold font-title flex lg:justify-start justify-center"
           >
-            <Image src={icon_1} alt="icon" width={24} height={16} />
+            <i class="fa-solid fa-location-dot"></i>
             <span class="ml-2"> Address </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
@@ -39,7 +32,7 @@ import icon_3 from "../assets/images/Vector-2.png";
           <h5
             class="text-xl font-semibold font-title flex lg:justify-start justify-center"
           >
-            <Image src={icon_2} alt="icon" width={24} height={16} />
+            <i class="fa-solid fa-phone"></i>
             <span class="ml-2"> Phone </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
@@ -52,7 +45,7 @@ import icon_3 from "../assets/images/Vector-2.png";
           <h5
             class="text-xl font-semibold font-title flex lg:justify-start justify-center"
           >
-            <Image src={icon_3} alt="icon" width={24} height={16} />
+            <i class="fa-solid fa-calendar-days"></i>
             <span class="ml-2"> Working time </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
@@ -120,15 +113,15 @@ import icon_3 from "../assets/images/Vector-2.png";
     form.addEventListener("submit", (e) => {
       const payload = new FormData(e.target);
       Email.send({
-        SecureToken: "9ce6e0d2-7579-4d17-a640-97a95b6839ce",
-        To: `${payload.get("email")}`,
-        From: "shukrullojon.dev@gmail.com",
+        SecureToken: "711b57fc-83fa-46a4-ac77-19051158d497",
+        To: "shukrullojon.dev@gmail.com",
+        From: "raxmatulloyevshukrullo@gmail.com",
         Subject: `${payload.get("subject")}`,
-        Body: `${payload.get("message")}`,
+        Body: `fullname: ${payload.get("fullname")}\nemail: ${payload.get("email")}\nmessage: ${payload.get("message")}`,
       }).then((message) => {
         alert("Thank you for your message!");
         console.log(message);
-        form.reset();
+        // form.reset();
       });
       e.preventDefault();
     });

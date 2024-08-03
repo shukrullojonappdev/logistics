@@ -5,9 +5,26 @@ import logo from "../assets/images/logo_nobg.png";
 
 <footer class="pt-14 pb-10 bg-blue-50">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
-    <div class="flex flex-col justify-center items-center">
-      <Image src={logo} alt="logo" class="h-[80px] w-auto" />
-      <p class="font-body mt-4 font-thin">© 2024. All rights reserved</p>
+    <div class="flex sm:flex-row flex-col justify-between items-start">
+      <Image
+        src={logo}
+        alt="logo"
+        class="h-[80px] w-auto hover:cursor-pointer hover:animate-pulse"
+      />
+      <div class="sm:mt-0 mt-6">
+        <i
+          class="fa-brands fa-instagram text-3xl text-gray-500 mx-4 hover:text-red-500 duration-150 hover:cursor-pointer"
+        ></i>
+        <i
+          class="fa-brands fa-facebook text-3xl text-gray-500 mx-4 hover:text-blue-700 duration-150 hover:cursor-pointer"
+        ></i>
+        <i
+          class="fa-solid fa-paper-plane text-3xl text-gray-500 mx-4 hover:text-blue-500 duration-150 hover:cursor-pointer"
+        ></i>
+      </div>
     </div>
+    <p class="font-body mt-10 font-thin text-left ml-4 sm:text-center">
+      © 2024. All rights reserved
+    </p>
   </div>
 </footer>
