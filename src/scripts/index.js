@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
       },
       top: -400,
       duration: 1,
+      overwrite: true
     });
   });
 
