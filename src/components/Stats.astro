@@ -1,23 +1,44 @@
+---
+import { Image } from "astro:assets";
+import happy from '../assets/icons/happy.png'
+import location from '../assets/icons/location.png'
+import statistics from '../assets/icons/statistics.png'
+import target from '../assets/icons/target.png'
+---
+
 <section class="pt-32">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
     <h2 class="text-3xl lg:text-4xl text-center font-title text-blue-600 mb-12">
       Stats
     </h2>
-    <div class="flex flex-wrap justify-around items-center gap-4">
+    <div class="flex flex-wrap justify-center items-center gap-4">
       <div
-        class="bg-blue-50 rounded-2xl min-w-[320px] max-w-[320px] p-10 flex-1"
+        class="stat bg-blue-50 rounded-2xl min-w-[250px] max-w-[250px] py-8 flex-1 flex flex-col items-center justify-center"
       >
-        <div class="bg-blue-50">asdf</div>
+        <Image src={happy} alt="icons" width={56} height={56} />
+        <div class="text-xl font-semibold text-gray-500 font-title my-2">Customers</div>
+        <p class="text-5xl font-semibold text-blue-500 font-title"><span id="stat1">0</span>M</p>
       </div>
       <div
-        class="bg-blue-50 rounded-2xl min-w-[320px] max-w-[320px] p-10 flex-1"
+        class="stat bg-blue-50 rounded-2xl min-w-[250px] max-w-[250px] py-8 flex-1 flex flex-col items-center justify-center"
       >
-        <div class="bg-blue-50">dfghgfhj</div>
+        <Image src={location} alt="icons" width={56} height={56} />
+        <div class="text-xl font-semibold text-gray-500 font-title my-2">Locations</div>
+        <span id="stat2" class="text-5xl font-semibold text-blue-500 font-title">0</span>
       </div>
       <div
-        class="bg-blue-50 rounded-2xl min-w-[320px] max-w-[320px] p-10 flex-1"
+        class="stat bg-blue-50 rounded-2xl min-w-[250px] max-w-[250px] py-8 flex-1 flex flex-col items-center justify-center"
       >
-        <div class="bg-blue-50">erty</div>
+        <Image src={statistics} alt="icons" width={56} height={56} />
+        <div class="text-xl font-semibold text-gray-500 font-title my-2">Statistics</div>
+        <p class="text-5xl font-semibold text-blue-500 font-title"><span id="stat3">0</span>M</p>
+      </div>
+      <div
+        class="stat bg-blue-50 rounded-2xl min-w-[250px] max-w-[250px] py-8 flex-1 flex flex-col items-center justify-center"
+      >
+        <Image src={target} alt="icons" width={56} height={56} />
+        <div class="text-xl font-semibold text-gray-500 font-title my-2">Target</div>
+        <p class="text-5xl font-semibold text-blue-500 font-title"><span id="stat4">0</span>M</p>
       </div>
     </div>
   </div>
