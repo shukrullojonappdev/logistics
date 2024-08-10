@@ -8,29 +8,34 @@
       About Us
     </h2>
     <div class="flex flex-col flex-wrap justify-center">
-      <div class="parallax_1 flex lg:flex-row flex-col py-6">
+      <div class="parallax_1 flex items-center lg:flex-row flex-col py-6">
         <div
-          class="overflow-hidden relative flex-1 lg:h-[400px] max-h-[400px] rounded-2xl"
+          class="overflow-hidden relative flex-1 lg:h-[400px] max-h-[400px] w-full rounded-2xl"
         >
           <img
             src="images/about1.jpg"
             alt="about image 1"
-            class="img lg:absolute relative top-0 left-0 h-[800px] w-full object-cover"
+            class="img relative lg:absolute top-0 left-0 h-[800px] w-full object-cover"
           />
         </div>
-        <div
-          class="flex-1 flex flex-col items-center justify-center m-4 text-center"
+        <p
+          class="about_text about_text_trigger_1 flex-1 font-body leading-6 font-medium text-gray-500 mx-4 my-6 text-xl text-justify uppercase"
         >
-          <h5 class="text-xl font-semibold text-blue-500 font-title">Safety</h5>
-          <p class="font-body leading-6 font-medium text-gray-500 mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-            voluptates dignissimos quae quaerat repellendus tenetur.
-          </p>
-        </div>
+          Aravan Cargo Inc., established in 2016 in Joliet, Illinois, is your
+          trusted partner on the journey to vehicle ownership. We have evolved
+          into a premier full-service logistics company, servicing all 48
+          continental states. Dedicated to delivering dependable service and
+          ensuring customer satisfaction, we have assisted numerous drivers in
+          transitioning from company drivers to successful fleet
+          owner-operators. In fact, a dozen drivers have successfully launched
+          their own trucking businesses with our support.
+        </p>
       </div>
-      <div class="parallax_2 flex lg:flex-row-reverse flex-col py-6">
+      <div
+        class="parallax_2 flex items-center lg:flex-row-reverse flex-col py-6"
+      >
         <div
-          class="overflow-hidden relative flex-1 lg:h-[400px] max-h-[400px] rounded-2xl"
+          class="overflow-hidden relative flex-1 lg:h-[400px] max-h-[400px] w-full rounded-2xl"
         >
           <img
             src="images/about2.jpg"
@@ -38,38 +43,23 @@
             class="img relative lg:absolute top-0 left-0 h-[800px] w-full object-cover"
           />
         </div>
-        <div
-          class="flex-1 flex flex-col items-center justify-center m-4 text-center"
+        <p
+          class="about_text about_text_trigger_2 flex-1 font-body leading-6 font-medium text-gray-500 mx-4 my-6 text-xl text-justify uppercase"
         >
-          <h5 class="text-xl font-semibold text-blue-500 font-title">
-            Shippers
-          </h5>
-          <p class="font-body leading-6 font-medium text-gray-500 mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-            voluptates dignissimos quae quaerat repellendus tenetur.
-          </p>
-        </div>
-      </div>
-      <div class="parallax_3 flex lg:flex-row flex-col py-6">
-        <div
-          class="overflow-hidden relative flex-1 lg:h-[400px] max-h-[400px] rounded-2xl"
-        >
-          <img
-            src="images/about3.jpg"
-            alt="about image 1"
-            class="img relative lg:absolute top-0 left-0 h-[800px] w-full object-cover"
-          />
-        </div>
-        <div
-          class="flex-1 flex flex-col items-center justify-center m-4 text-center"
-        >
-          <h5 class="text-xl font-semibold text-blue-500 font-title">Base</h5>
-          <p class="font-body leading-6 font-medium text-gray-500 mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-            voluptates dignissimos quae quaerat repellendus tenetur.
-          </p>
-        </div>
+          For aspiring truck drivers seeking self-employment, Aravan Cargo Inc.
+          is a trusted ally, helping individuals achieve their entrepreneurial
+          goals. With our proven expertise, thorough support, and professional
+          guidance, we enable trucking professionals to attain financial
+          independence in the dynamic transportation industry.
+        </p>
       </div>
     </div>
   </div>
 </section>
+
+<style scoped>
+  .about_text {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+</style>
