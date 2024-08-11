@@ -54,10 +54,10 @@ window.addEventListener("load", () => {
     })
   })
 
-  gsap.utils.toArray('.about_text').forEach((text, i) => {
+  gsap.utils.toArray('.text-animation').forEach((text, i) => {
     gsap.to(text, {
       scrollTrigger: {
-        trigger: `.about_text_trigger_${i + 1}`,
+        trigger: `.text-animation_trigger_${i + 1}`,
         start: `top bottom`,
         end: 'bottom top',
       },
