@@ -19,15 +19,31 @@ requestAnimationFrame(raf);
 gsap.registerPlugin(ScrollTrigger);
 lenis.on("scroll", ScrollTrigger.update);
 
-const nav = document.getElementsByTagName("nav")[0];
-const linksEl = nav.getElementsByTagName("li");
+const header = document.getElementsByTagName("header")[0];
+const headerLinksEl = header.getElementsByTagName("li");
 const links = ["about", "driver", "broker", "contact"];
 
-if (linksEl.length > 0) {
-  for (let i = 0; i < linksEl.length; i++) {
-    linksEl[i].addEventListener("click", (e) => {
+if (headerLinksEl.length > 0) {
+  for (let i = 0; i < headerLinksEl.length; i++) {
+    headerLinksEl[i].addEventListener("click", (e) => {
       lenis.scrollTo(`#${links[i]}`, {
         duration: i + 1,
+        easing: (x) => {
+          return 1 - (1 - x) * (1 - x);
+        },
+      });
+    });
+  }
+}
+
+const footer = document.getElementsByTagName("footer")[0];
+const footerLinksEl = footer.getElementsByTagName("li");
+
+if (footerLinksEl.length > 0) {
+  for (let i = 0; i < footerLinksEl.length; i++) {
+    footerLinksEl[i].addEventListener("click", (e) => {
+      lenis.scrollTo(`#${links[i]}`, {
+        duration: footerLinksEl.length - i - 1,
         easing: (x) => {
           return 1 - (1 - x) * (1 - x);
         },
