@@ -26,7 +26,12 @@ const links = ["about", "driver", "broker", "contact"];
 if (linksEl.length > 0) {
   for (let i = 0; i < linksEl.length; i++) {
     linksEl[i].addEventListener("click", (e) => {
-      lenis.scrollTo(`#${links[i]}`, { duration: (i + 1) * 2 });
+      lenis.scrollTo(`#${links[i]}`, {
+        duration: i + 1,
+        easing: (x) => {
+          return 1 - (1 - x) * (1 - x);
+        },
+      });
     });
   }
 }
@@ -110,3 +115,7 @@ window.addEventListener("load", () => {
 //     }
 //   }, stepTime);
 // }
+
+function easeInSine(x) {
+  return 1 - Math.cos((x * Math.PI) / 2);
+}
