@@ -1,66 +1,55 @@
-<section class="py-20">
+<section id="contact" class="py-24">
   <div class="max-w-[1172px] px-4 h-full mx-auto">
-    <div class="text-center mb-16">
+    <div class="text-center mb-8">
       <h3 class="text-3xl lg:text-4xl text-center font-title text-blue-600">
         Get in touch with us
       </h3>
-      <p class="text-gray-500 font-body font-thin leading-6 mt-4">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-        necessitatibus perspiciatis velit, repellat consequuntur reprehenderit
-        repudiandae error minus saepe eius distinctio quidem atque rerum,
-        pariatur adipisci doloribus praesentium! Distinctio, eum!
-      </p>
     </div>
-    <div class="grid lg:grid-cols-2 grid-cols-1">
+    <div class="flex lg:flex-row flex-col">
       <div
-        class="col-span-1 flex flex-col justify-center lg:text-left text-center"
+        class="flex-1 flex flex-col justify-center lg:text-left text-center"
       >
-        <div class="mb-12">
+        <div class="lg:mb-12 mb-8">
           <h5
-            class="text-xl font-semibold font-title flex lg:justify-start justify-center"
+            class="text-xl font-semibold font-title flex lg:justify-start justify-center text-gray-700"
           >
-            <i class="fa-solid fa-location-dot"></i>
-            <span class="ml-2"> Address </span>
+          <i class="w-6 h-6 fa-solid fa-envelope"></i>
+            <span class="ml-2 -mt-1"> HR department: </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
-            236 East 21st Street, New York, NY 10010
-            <br />
-            300 West 21st Street, New York, NY 10010
+           <a class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full" href="mailto:aravancargogooo@gmail.com">aravancargogooo@gmail.com</a>
           </p>
         </div>
-        <div class="mb-12">
+        <div class="lg:mb-12 mb-8">
           <h5
-            class="text-xl font-semibold font-title flex lg:justify-start justify-center"
+            class="text-xl font-semibold font-title flex lg:justify-start justify-center text-gray-700"
           >
-            <i class="fa-solid fa-phone"></i>
-            <span class="ml-2"> Phone </span>
+            <i class="w-6 h-6 fa-solid fa-phone"></i>
+            <span class="ml-2 -mt-1"> Phone number: </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
-            Mobile: 987-654-3210
-            <br />
-            Office: 123-456-7890
+            <a class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full" href="tel:+12175762628">+1 217 576 2628</a>
           </p>
         </div>
-        <div class="mb-12">
+        <div class="lg:mb-12 mb-8">
           <h5
-            class="text-xl font-semibold font-title flex lg:justify-start justify-center"
+            class="text-xl font-semibold font-title flex lg:justify-start justify-center text-gray-700"
           >
-            <i class="fa-solid fa-calendar-days"></i>
-            <span class="ml-2"> Working time </span>
+          <i class="w-6 h-6 fa-brands fa-square-instagram"></i>
+            <span class="ml-2 -mt-1"> Instagram: </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
-            Monday - Friday: 9am - 5pm
-            <br />
-            Saturday: 9am - 1pm
+            <a class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full" href="https://www.instagram.com/aravancargo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@aravancargo</a>
           </p>
         </div>
       </div>
-      <div class="col-span-1">
+      <div class="flex-1">
         <form id="contact-form" class="flex flex-col w-full">
-          <label class="ml-1 mb-2 font-body font-medium" for="fullname"
+          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="fullname"
             >Fullname</label
           >
           <input
+          required
             autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="text"
@@ -68,10 +57,11 @@
             name="fullname"
             placeholder="Enter your fullname"
           />
-          <label class="ml-1 mb-2 font-body font-medium" for="email"
+          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="email"
             >Email</label
           >
           <input
+          required
             autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="email"
@@ -79,10 +69,11 @@
             name="email"
             placeholder="Enter your email"
           />
-          <label class="ml-1 mb-2 font-body font-medium" for="subject"
+          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="subject"
             >Subject</label
           >
           <input
+          required
             autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="text"
@@ -90,7 +81,7 @@
             name="subject"
             placeholder="Enter your subject"
           />
-          <label class="ml-1 mb-2 font-body font-medium" for="message"
+          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="message"
             >Message</label
           >
           <textarea
@@ -99,9 +90,10 @@
             name="message"
             placeholder="Enter your message"></textarea>
           <input
+          required
             type="submit"
             value="Submit"
-            class="bg-blue-600 lg:max-w-[50%] text-white px-16 py-4 mt-2 rounded-xl font-medium font-title text-sm duration-150 hover:scale-105"
+            class="bg-blue-600 lg:max-w-[50%] text-white px-16 py-4 mt-2 rounded-xl font-medium font-title text-sm duration-150 lg:hover:scale-105"
           />
         </form>
       </div>
