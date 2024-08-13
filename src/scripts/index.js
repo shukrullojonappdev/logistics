@@ -59,7 +59,6 @@ window.addEventListener("load", () => {
         trigger: `.text-animation_trigger_${i + 1}`,
         start: `top bottom`,
         end: "bottom top",
-        markers: true,
       },
       opacity: 1,
       y: 0,
