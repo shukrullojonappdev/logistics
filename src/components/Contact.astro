@@ -113,9 +113,9 @@
     form.addEventListener("submit", (e) => {
       const payload = new FormData(e.target);
       Email.send({
-        SecureToken: "711b57fc-83fa-46a4-ac77-19051158d497",
-        To: "shukrullojon.dev@gmail.com",
-        From: "raxmatulloyevshukrullo@gmail.com",
+        SecureToken: "6058ae95-b33a-48b1-bf01-eb2817f4db31",
+        To: "Aravancargo88@gmail.com",
+        From: "Aravancargo88@gmail.com",
         Subject: `${payload.get("subject")}`,
         Body: `fullname: ${payload.get("fullname")}\nemail: ${payload.get("email")}\nmessage: ${payload.get("message")}`,
       }).then((message) => {
