@@ -3,10 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Driver from "../components/Driver.astro";
+import Broker from "../components/Broker.astro";
 import Services from "../components/Services.astro";
-import Faqs from "../components/Faqs.astro";
+// import Faqs from "../components/Faqs.astro";
 import Contact from "../components/Contact.astro";
-import Stats from "../components/Stats.astro";
+// import Stats from "../components/Stats.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo_nobg.png";
@@ -15,15 +16,25 @@ import logo from "../assets/images/logo_nobg.png";
 <Layout title="Logistic">
   <div>
     <header
-      class="backdrop-blur-sm absolute top-0 left-0 h-[100px] w-full flex items-center justify-center"
+      class="max-w-[1172px] px-4 mx-auto h-[100px] w-full flex items-center justify-between"
     >
       <Image src={logo} alt="logo" class="h-[80px] w-auto" />
+      <nav class="flex-1 max-[800px]:fixed max-[800px]:z-50 max-[800px]:top-0 max-[800px]:left-0 max-[800px]:backdrop-blur-sm max-[800px]:w-full max-[800px]:drop-shadow-sm max-[800px]:h-full">
+        <ul class="flex w-full justify-end max-[800px]:flex-col max-[800px]:w-[300px] max-[800px]:bg-blue-50 max-[800px]:h-full max-[800px]:justify-start">
+          <li class="max-[800px]:after:content-none cursor-pointer ml-8 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full">About us</li>
+          <li class="max-[800px]:after:content-none cursor-pointer ml-8 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full">Drivers</li>
+          <li class="max-[800px]:after:content-none cursor-pointer ml-8 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full">Brokers</li>
+          <li class="max-[800px]:after:content-none cursor-pointer ml-8 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full">Team</li>
+          <li class="max-[800px]:after:content-none cursor-pointer ml-8 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full">Contacts</li>
+        </ul>
+      </nav>
     </header>
     <Hero />
     <About />
     <Driver />
-    <!-- <Services />
-    <Stats />
+    <Broker />
+     <Services />
+    <!-- <Stats />
     <Faqs />  -->
     <Contact />
     <Footer />

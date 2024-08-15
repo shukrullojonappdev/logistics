@@ -1,35 +1,50 @@
-<section class="mt-28">
+---
+import { Image } from "astro:assets";
+import img1 from '../assets/images/IMG_3196.JPEG'
+import img2 from '../assets/images/IMG_3189.JPEG'
+import img3 from '../assets/images/IMG_3190.JPEG'
+import img4 from '../assets/images/IMG_3193.JPEG'
+import img5 from '../assets/images/IMG_3192.JPEG'
+import img6 from '../assets/images/IMG_3195.JPEG'
+---
+
+<section id="job" class="py-24 bg-blue-50">
   <div
-    class="bg-blue-50 py-20 max-w-[1140px] h-full pl-0 min-[821px]:pl-4 mx-auto rounded-3xl max-[1140px]:rounded-none"
+    class="max-w-[1140px] h-full pl-0 min-[821px]:pl-4 mx-auto"
   >
     <div class="grid min-[821px]:grid-cols-2 grid-cols-1">
       <div
         class="col-span-1 flex flex-col justify-center items-center text-center mb-12"
       >
         <h3 class="text-3xl lg:text-4xl font-title text-blue-600 mx-8">
-          Our Services
+          Join Our Team!
         </h3>
         <p
-          class="text-gray-500 font-body font-medium leading-6 mt-4 max-w-96 mx-8"
+          class="font-body font-medium leading-6 mt-4 max-w-96 text-gray-700 mx-4 my-6 text-lg md:text-xl"
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, aperiam
-          itaque. Non optio dicta illo.
+        We're seeking talented individuals ready to grow and improve with us. Whether you do or not have logistics experience and the right skills, we have various vacancy options for candidates who are eager to work in this industry. 
         </p>
       </div>
       <div class="col-span-1">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <span>Service 1</span>
-              <img src="images/service1.jpg" alt="service 1" />
+              <Image src={img1} alt="member 1" />
             </div>
             <div class="swiper-slide">
-              <span>Service 2</span>
-              <img src="images/service2.jpg" alt="service 1" />
+              <Image src={img2} alt="member 2" />
             </div>
             <div class="swiper-slide">
-              <span>Service 3</span>
-              <img src="images/service3.jpg" alt="service 1" />
+              <Image src={img3} alt="member 3" />
+            </div>
+            <div class="swiper-slide">
+              <Image src={img4} alt="member 4" />
+            </div>
+            <div class="swiper-slide">
+              <Image src={img5} alt="member 5" />
+            </div>
+            <div class="swiper-slide">
+              <Image src={img6} alt="member 6" />
             </div>
           </div>
           <div class="swiper-button-next"></div>
