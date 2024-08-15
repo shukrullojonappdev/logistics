@@ -6,18 +6,20 @@
       </h3>
     </div>
     <div class="flex lg:flex-row flex-col">
-      <div
-        class="flex-1 flex flex-col justify-center lg:text-left text-center"
-      >
+      <div class="flex-1 flex flex-col justify-center lg:text-left text-center">
         <div class="lg:mb-12 mb-8">
           <h5
             class="text-xl font-semibold font-title flex lg:justify-start justify-center text-gray-700"
           >
-          <i class="w-6 h-6 fa-solid fa-envelope"></i>
+            <i class="w-6 h-6 fa-solid fa-envelope"></i>
             <span class="ml-2 -mt-1"> HR department: </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
-           <a class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full" href="mailto:aravancargogooo@gmail.com">aravancargogooo@gmail.com</a>
+            <a
+              class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+              href="mailto:aravancargogooo@gmail.com"
+              >aravancargogooo@gmail.com</a
+            >
           </p>
         </div>
         <div class="lg:mb-12 mb-8">
@@ -28,28 +30,36 @@
             <span class="ml-2 -mt-1"> Phone number: </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
-            <a class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full" href="tel:+12175762628">+1 217 576 2628</a>
+            <a
+              class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+              href="tel:+12175762628">+1 217 576 2628</a
+            >
           </p>
         </div>
         <div class="lg:mb-12 mb-8">
           <h5
             class="text-xl font-semibold font-title flex lg:justify-start justify-center text-gray-700"
           >
-          <i class="w-6 h-6 fa-brands fa-square-instagram"></i>
+            <i class="w-6 h-6 fa-brands fa-square-instagram"></i>
             <span class="ml-2 -mt-1"> Instagram: </span>
           </h5>
           <p class="font-body leading-6 font-medium text-gray-500 mt-2">
-            <a class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full" href="https://www.instagram.com/aravancargo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@aravancargo</a>
+            <a
+              class="text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+              href="https://www.instagram.com/aravancargo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >@aravancargo</a
+            >
           </p>
         </div>
       </div>
       <div class="flex-1">
         <form id="contact-form" class="flex flex-col w-full">
-          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="fullname"
-            >Fullname</label
+          <label
+            class="ml-1 mb-2 font-body font-medium text-gray-700"
+            for="fullname">Fullname</label
           >
           <input
-          required
+            required
             autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="text"
@@ -57,11 +67,12 @@
             name="fullname"
             placeholder="Enter your fullname"
           />
-          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="email"
-            >Email</label
+          <label
+            class="ml-1 mb-2 font-body font-medium text-gray-700"
+            for="email">Email</label
           >
           <input
-          required
+            required
             autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="email"
@@ -69,11 +80,12 @@
             name="email"
             placeholder="Enter your email"
           />
-          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="subject"
-            >Subject</label
+          <label
+            class="ml-1 mb-2 font-body font-medium text-gray-700"
+            for="subject">Subject</label
           >
           <input
-          required
+            required
             autocomplete="off"
             class="border-2 rounded-xl px-3 py-4 focus:outline-blue-600 mb-6 font-body font-thin"
             type="text"
@@ -81,8 +93,9 @@
             name="subject"
             placeholder="Enter your subject"
           />
-          <label class="ml-1 mb-2 font-body font-medium text-gray-700" for="message"
-            >Message</label
+          <label
+            class="ml-1 mb-2 font-body font-medium text-gray-700"
+            for="message">Message</label
           >
           <textarea
             id="message"
@@ -90,7 +103,7 @@
             name="message"
             placeholder="Enter your message"></textarea>
           <input
-          required
+            required
             type="submit"
             value="Submit"
             class="bg-blue-600 lg:max-w-[50%] text-white px-16 py-4 mt-2 rounded-xl font-medium font-title text-sm duration-150 lg:hover:scale-105"
@@ -112,8 +125,7 @@
         Body: `fullname: ${payload.get("fullname")}\nemail: ${payload.get("email")}\nmessage: ${payload.get("message")}`,
       }).then((message) => {
         alert("Thank you for your message!");
-        console.log(message);
-        // form.reset();
+        form.reset();
       });
       e.preventDefault();
     });
