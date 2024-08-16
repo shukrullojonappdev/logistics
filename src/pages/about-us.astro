@@ -1,24 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Driver from "../components/Driver.astro";
 import Broker from "../components/Broker.astro";
-import Services from "../components/Services.astro";
-// import Faqs from "../components/Faqs.astro";
-import Contact from "../components/Contact.astro";
-import Stats from "../components/Stats.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/images/logo_nobg.png";
 ---
 
-<Layout title="Aravan Cargo">
+<Layout title="About - Aravan Cargo">
   <div>
     <header
       class="max-w-[1172px] px-4 mx-auto h-[100px] w-full flex items-center justify-between"
     >
-      <a href="/"><Image src={logo} alt="logo" class="h-[80px] w-auto" /></a>
+    <a href="/"><Image src={logo} alt="logo" class="h-[80px] w-auto" /></a>
       <i class="fa-solid fa-bars max-[800px]:block hidden text-3xl text-gray-700 mr-4 cursor-pointer hover:text-blue-500 duration-150"></i>
       <nav class="duration-300 header_nav flex-1 max-[800px]:fixed max-[800px]:right-[800px]  max-[800px]:z-[2000000001] max-[800px]:top-0 max-[800px]:backdrop-blur-sm max-[800px]:w-full max-[800px]:drop-shadow-sm max-[800px]:h-full">
         <ul class="duration-300 flex w-full justify-end max-[800px]:relative max-[800px]:pt-10 max-[800px]:left-[-300px] max-[800px]:flex-col max-[800px]:w-[300px] max-[800px]:bg-blue-50 max-[800px]:h-full max-[800px]:justify-start">
@@ -27,14 +22,9 @@ import logo from "../assets/images/logo_nobg.png";
         </ul>
       </nav>
     </header>
-    <Hero />
     <About />
     <Driver />
     <Broker />
-    <Stats />
-    <Services />
-    <!-- <Faqs />  -->
-    <Contact />
     <Footer />
   </div>
 </Layout>
