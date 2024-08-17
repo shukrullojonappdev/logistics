@@ -1,6 +1,7 @@
 ---
-import { Image } from "astro:assets"
-import img from '../assets/images/IMG_3188.JPEG'
+import { Image } from "astro:assets";
+import img from "../assets/images/IMG_3188.JPEG";
+const { count } = Astro.props;
 ---
 
 <section id="broker" class="py-24">
@@ -15,31 +16,35 @@ import img from '../assets/images/IMG_3188.JPEG'
         <div
           class="relative flex-1 max-h-[400px] lg:h-[300px] w-full rounded-2xl mx-4 overflow-hidden"
         >
-        <video
-        src="/videos/IMG_3197.MP4"
-        autoplay
-        loop
-        muted
-        class="w-full object-cover h-full text-animation text-animation_trigger_8"></video>
+          <video
+            src="/videos/IMG_3197.MP4"
+            autoplay
+            loop
+            muted
+            class=`w-full object-cover h-full text-animation text-animation_trigger_${count}`
+          ></video>
         </div>
         <ul
           class="flex-1 font-body leading-10 font-medium text-gray-700 mx-4 my-6 text-xl text-left"
         >
-        <li class="text-animation text-animation_trigger_9">
-         <i class="fa-solid fa-check text-blue-500 mr-2"></i> A team of professional experts
-        </li>
-        <li class="text-animation text-animation_trigger_10">
-         <i class="fa-solid fa-check text-blue-500 mr-2"></i> Performance-based individual rates
-        </li>
-        <li class="text-animation text-animation_trigger_11">
-         <i class="fa-solid fa-check text-blue-500 mr-2"></i> Professional drivers
-        </li>
-        <li class="text-animation text-animation_trigger_12">
-         <i class="fa-solid fa-check text-blue-500 mr-2"></i> Broker bonus program
-        </li>
-        <li class="text-animation text-animation_trigger_13">
-         <i class="fa-solid fa-check text-blue-500 mr-2"></i> Quick and easy paperwork process
-        </li>
+          <li class=`text-animation text-animation_trigger_${count+1}`>
+            <i class="fa-solid fa-check text-blue-500 mr-2"></i> A team of professional
+            experts
+          </li>
+          <li class=`text-animation text-animation_trigger_${count+2}`>
+            <i class="fa-solid fa-check text-blue-500 mr-2"></i> Performance-based
+            individual rates
+          </li>
+          <li class=`text-animation text-animation_trigger_${count+3}`>
+            <i class="fa-solid fa-check text-blue-500 mr-2"></i> Professional drivers
+          </li>
+          <li class=`text-animation text-animation_trigger_${count+4}`>
+            <i class="fa-solid fa-check text-blue-500 mr-2"></i> Broker bonus program
+          </li>
+          <li class=`text-animation text-animation_trigger_${count+5}`>
+            <i class="fa-solid fa-check text-blue-500 mr-2"></i> Quick and easy paperwork
+            process
+          </li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo_nobg.png";
+import image from "../assets/images/pexels-minhle17vn-977213.jpg";
+import Driver from "../components/Driver.astro";
+---
+
+<Layout title="Aravan Cargo for Drivers">
+  <div>
+    <header
+      class="max-w-[1172px] px-4 mx-auto h-[100px] w-full flex items-center justify-between"
+    >
+      <a href="/"><Image src={logo} alt="logo" class="h-[80px] w-auto" /></a>
+      <i
+        class="fa-solid fa-bars max-[800px]:block hidden text-3xl text-gray-700 mr-4 cursor-pointer hover:text-blue-500 duration-150"
+      ></i>
+      <nav
+        class="duration-300 header_nav flex-1 max-[800px]:fixed max-[800px]:right-[800px] max-[800px]:z-[2000000001] max-[800px]:top-0 max-[800px]:backdrop-blur-sm max-[800px]:w-full max-[800px]:drop-shadow-sm max-[800px]:h-full"
+      >
+        <ul
+          class="duration-300 flex w-full justify-end max-[800px]:relative max-[800px]:pt-10 max-[800px]:left-[-300px] max-[800px]:flex-col max-[800px]:w-[300px] max-[800px]:bg-blue-50 max-[800px]:h-full max-[800px]:justify-start"
+        >
+          <li
+            class="max-[800px]:after:content-none cursor-pointer ml-8 max-[800px]:mb-4 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+          >
+            <a href="/about-us/"> About us</a>
+          </li>
+          <li
+            class="max-[800px]:after:content-none cursor-pointer ml-8 max-[800px]:mb-4 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+          >
+            <a href="/for-drivers/">Drivers</a>
+          </li>
+          <li
+            class="max-[800px]:after:content-none cursor-pointer ml-8 max-[800px]:mb-4 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+          >
+            <a href="/for-brokers/">Brokers</a>
+          </li>
+          <li
+            class="max-[800px]:after:content-none cursor-pointer ml-8 max-[800px]:mb-4 text-xl text-gray-700 font-body duration-150 hover:text-blue-500 relative after:content-* after:absolute after:-bottom-1 after:left-0 after:w-0 after:duration-300 after:h-[2px] after:bg-blue-500 hover:after:w-full"
+          >
+            <a href="/contact-us/">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <Driver count={1} bg="bg-none" />
+    <div class="max-w-[1172px] px-8 mx-auto">
+      <Image
+        src={image}
+        alt="image"
+        class="text-animation text-animation_trigger_4 w-full rounded-2xl mb-4"
+      />
+      <p
+        class="text-animation text-animation_trigger_5 flex-1 font-body leading-8 font-medium text-gray-700 mb-20 md:text-xl text-lg text-justify"
+      >
+        Aravan Cargo LLC values our drivers as key partners in our logistics
+        operations. We provide a supportive environment with competitive
+        compensation, flexible scheduling, and access to modern equipment. Our
+        team is committed to ensuring that drivers have the resources they need
+        for safe and efficient transportation. We prioritize driver well-being
+        and offer ongoing training opportunities to enhance skills and safety
+        awareness. Join us at Aravan Cargo LLC and become part of a team that
+        values your contributions and invests in your success.
+      </p>
+    </div>
+    <Footer />
+  </div>
+</Layout>
+
+<style is:global>
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+</style>

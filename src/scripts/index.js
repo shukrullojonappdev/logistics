@@ -21,11 +21,9 @@ lenis.on("scroll", ScrollTrigger.update);
 
 window.addEventListener("load", () => {
   const header = document.getElementsByTagName("header")[0];
-  const headerLinksEl = header.getElementsByTagName("li");
   const headerBurger = header.getElementsByTagName("i")[0];
   const headerNav = header.getElementsByTagName("nav")[0];
   const headerList = header.getElementsByTagName("ul")[0];
-  const links = ["about", "driver", "broker", "job", "contact"];
 
   headerBurger.addEventListener("click", () => {
     if (window.innerWidth <= 800) {
@@ -119,6 +117,7 @@ window.addEventListener("load", () => {
         trigger: `.text-animation_trigger_${i + 1}`,
         start: `top bottom`,
         end: "bottom top",
+        // markers: true,
       },
       opacity: 1,
       y: 0,
