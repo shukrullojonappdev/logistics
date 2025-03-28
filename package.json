@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.12.2",
+    "astro": "^4.16.6",
     "gsap": "^3.12.5",
     "leaflet": "^1.9.4",
     "lenis": "^1.1.9",
